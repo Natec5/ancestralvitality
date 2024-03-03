@@ -1,0 +1,369 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #004225;
+    color: #fff;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #fff;
+    color: #004225;
+    border-color: #fff;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding around the entire main content area */
+}
+
+.main-content {
+    display: flex; /* Use flexbox to center the child vertically and horizontally */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    margin: 0 auto; /* This will center the container 
+    text-align: center;
+    box-sizing: border-box;
+    padding: 50px 0; /* Add padding top and bottom */
+    background: none; /* No background here, it will be on the inner elements */
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    z-index: 1; /* Higher z-index to stack on top of the pseudo-element */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white for content */
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/background.png'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Transparency for the background image */
+    z-index: -1; /* Below the content */
+}
+
+/* Style adjustments for elements within main */
+main * {
+    padding: 10px; /* Padding inside each element */
+    margin-bottom: 10px; /* Margin below each element */
+    border-radius: 5px; /* Rounded corners for each element */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow for depth */
+    background-color: #fff; /* White background for content elements */
+}
+
+main img, main button {
+    background-color: transparent; /* Removes the white background for specific elements */
+    padding: 0; /* Resets padding */
+    margin-bottom: 15px; /* Adjust margin as needed */
+    border-radius: 0; /* Resets border radius */
+    box-shadow: none; /* Removes box shadow */
+}
+
+/* Ensure the form and its children do not have a white background */
+#contact-form {
+    max-width: 600px; /* Adjust this value to suit your layout */
+    margin: 0 auto; /* Centers the form in the parent container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form elements */
+}
+
+/* Product Styles */
+#products {
+    margin-top: 20px;
+}
+
+.product-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    color: #004225;
+    margin-bottom: 5px;
+}
+
+.product p {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.learn-more {
+    background-color: #006633; /* Green */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.learn-more:hover {
+    background-color: #004225;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Reset form elements to remove browser defaults */
+input, textarea, button, select, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Apply consistent styling to form elements within the contact form */
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#contact-form button {
+    width: auto; /* Allow the button to size naturally */
+    padding: 10px 15px;
+    margin-top: 10px; /* Space above the button */
+    background-color: #006633;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#contact-form button:hover {
+    background-color: #004225;
+}
+
+/* Assuming previous CSS rules are already included */
+
+/* Landing Page Styles */
+
+#landing {
+    min-height: 80vh; /* Adjust the height as needed */
+    background-size: contain; /* Change from cover to contain for full image display */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.landing-inner {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    max-width: 700px; /* Adjust the width as needed */
+    margin: 0 auto;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006633; /* Button color */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-main:hover {
+    background-color: #004225; /* Darken button on hover */
+}
+
+@media (max-width: 768px) {
+    #landing {
+        min-height: 60vh;
+    }
+    .landing-inner {
+        padding: 10px;
+    }
+}
+
+.product-image {
+    max-width: 100%; /* Limits the image to not exceed the width of its container */
+    max-height: 400px; /* Limits the height of the image */
+    width: auto; /* Ensures the width of the image scales with the height */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Prevents inline default spacing */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+img {
+    border: 8px solid black; /* Adjust the pixel value to the desired thickness */
+    /* Other existing styles for images */
+}
+
+main p, main h1, main h2 {
+    max-width: 33.33%; /* A third of the page */
+    margin-left: auto; /* Centers the text block */
+    margin-right: auto; /* Centers the text block */
+    /* You may want to add padding here if the text is too close to the edge */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#logo {
+    max-width: 100px; /* Adjust as necessary */
+}
+
+#company-name {
+    font-family: 'Trajan Pro', 'Times New Roman', serif; /* Trajan Pro is a font with Roman influences */
+    margin-left: 20px; /* Add space between the logo and the company name */
+    color: gold; /* Or any color that fits the theme */
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Specifically target the #about-us section */
+#about-us {
+    /* Reset any flex properties that might be causing issues */
+    flex: 0 0 auto; /* Do not grow, do not shrink, and be based on the width property */
+    width: 100%; /* Full width to start with */
+    max-width: 33.33%; /* A third of the page width */
+    margin: 0 auto; /* Center it */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #fff; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow */
+}
+
+/* Ensure that the h1 inside #about-us doesn't stretch too far */
+#about-us h1 {
+    /* Apply the max-width directly to the h1 if necessary */
+    max-width: 600px; /* Or whatever max-width fits your design */
+    margin: 0 auto; /* Center it */
+}
+
+/* Adjust the max-width for p tags inside #about-us if needed */
+#about-us p {
+    max-width: 600px; /* Or adjust as needed */
+    margin: 0 auto; /* Center it */
+}
+
+/* Specifically target the #about-us section */
+#product-detail {
+    /* Reset any flex properties that might be causing issues */
+    flex: 0 0 auto; /* Do not grow, do not shrink, and be based on the width property */
+    width: 100%; /* Full width to start with */
+    max-width: 33.33%; /* A third of the page width */
+    margin: 0 auto; /* Center it */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #fff; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow */
+}
+
+/* Ensure that the h1 inside #about-us doesn't stretch too far */
+#product-detail h1 {
+    /* Apply the max-width directly to the h1 if necessary */
+    max-width: 600px; /* Or whatever max-width fits your design */
+    margin: 0 auto; /* Center it */
+}
+
+/* Adjust the max-width for p tags inside #about-us if needed */
+#product-detail p {
+    max-width: 600px; /* Or adjust as needed */
+    margin: 0 auto; /* Center it */
+}
